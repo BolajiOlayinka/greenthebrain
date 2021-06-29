@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Logo from "../src/assets/Logo.png";
+import Logo from "../src/assets/Logo.svg";
 import donatelove from "../src/assets/love.svg";
 import { HashLink as Link } from "react-router-hash-link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

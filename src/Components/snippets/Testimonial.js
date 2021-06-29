@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import OwlCarousel from "react-owl-carousel";
-import Image1 from "../../assets/test-image1.png";
+import Image1 from "../../assets/testimonial-3.jpeg";
+import Image2 from "../../assets/testimonial-2.jpeg";
+import Image3 from "../../assets/testimonial-1.jpeg";
 import LeftQuote from "../../assets/left-quote.jpg";
 import "../../../node_modules/owl.carousel/dist/assets/owl.carousel.min.css";
 import "../../../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css";
@@ -51,7 +53,7 @@ function Testimonial() {
       <div className="item">
         <Wrapper>
           <TestimonialImage>
-            <img src={Image1} alt="Green the Brain Testimonial" />
+            <img src={Image2} alt="Green the Brain Testimonial" />
           </TestimonialImage>
 
           <TestimonialText>
@@ -62,16 +64,11 @@ function Testimonial() {
             />
             <Text>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam "Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam"Lorem ipsum dolor
-                sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam
+              I have been following Green the Brain Institute on Social media and I must commend the teams effort. 
+              Thank you for the exposure you give us. These days I find myself more aware and informed about my environment. 
+              Keeping it sustainable is everyone's effort and not just some set of people.
               </p>
-              <p>- Olayiwola Olamide</p>
+              <p>- Oluwakemi Odusanwo</p>
             </Text>
           </TestimonialText>
         </Wrapper>
@@ -79,7 +76,7 @@ function Testimonial() {
       <div className="item">
         <Wrapper>
           <TestimonialImage>
-            <img src={Image1} alt="Green the Brain Testimonial" />
+            <img src={Image3} alt="Green the Brain Testimonial" />
           </TestimonialImage>
 
           <TestimonialText>
@@ -90,16 +87,13 @@ function Testimonial() {
             />
             <Text>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam "Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam"Lorem ipsum dolor
-                sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam
+              Green the Brain institute is really awesome and don't even get me started on the name. 
+              🥰 The thoughtfulness that the team puts into the activities being carried out across 
+              board is contagious.From following on social media, one thing is clear; 
+              Green the Brain is not your usual environmental campaign group. 
+              This team is out to make a difference!
               </p>
-              <p>- Olayiwola Olamide</p>
+              <p>- Babatunde Adeleke</p>
             </Text>
           </TestimonialText>
         </Wrapper>
@@ -125,7 +119,9 @@ const Wrapper = styled.div`
   align-items: center;
   padding-top:50px;
 `;
-const TestimonialImage = styled.div``;
+const TestimonialImage = styled.div`
+width:300px;
+`;
 const TestimonialText = styled.div`
   width: 480px;
   height: 300px;
