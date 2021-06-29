@@ -17,6 +17,7 @@ import ProjectImageTwo from '../../assets/project-image2.png';
 import ProjectImageThree from '../../assets/project-image3.png';
 import ProjectImageFour from '../../assets/project-image4.png';
 import GalleryIcon from '../../assets/gallery.svg';
+import Testimonial from "../snippets/Testimonial";
 
 
 function Home() {
@@ -104,6 +105,10 @@ function Home() {
       <Button iconImage={GalleryIcon} buttonText="View Gallery" backgroundColor="rgba(9, 98, 12, 0.78)"/>
         </Container>
       </ProjectSection>
+      <Container>
+        
+    <Testimonial/>
+      </Container>
     </React.Fragment>
   );
 }
