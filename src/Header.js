@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Logo from "../src/assets/Logo.svg";
+import Logo from "../src/assets/Logo.png";
 import donatelove from "../src/assets/love.svg";
 import { HashLink as Link } from "react-router-hash-link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -84,8 +84,8 @@ const LeftHeader = styled.div`
   margin-right: auto;
   margin-left: 68px;
   img {
-    width: 230px;
-    height: 70px;
+    width: 200px;
+    height: 60px;
   }
 `;
 
