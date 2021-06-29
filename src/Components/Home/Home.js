@@ -31,11 +31,12 @@ function Home() {
               <img src={BannerLine} alt="Yellow Curve" />
             </Line>
             <Text>
-              <TextHeading>Green the Brain Institute</TextHeading>
+              <TextHeading>Green the Brain Institute (Think Sustainably)</TextHeading>
               <TextSubHeading>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam
+              An environmental education institute that 
+              employs unconventional activities to educate 
+              young people on the importance of the environment 
+              and the need to preserve it.
               </TextSubHeading>
             </Text>
           </BannerContent>
@@ -166,18 +167,18 @@ const TextHeading = styled.div`
   font-family: "Nunito", sans-serif;
   font-style: normal;
   font-weight: 800;
-  font-size: 75px;
+  font-size: 35px;
   color: var(--mainYellow);
   text-align: center;
 `;
 const TextSubHeading = styled.div`
   font-family: "Nunito", sans-serif;
   font-weight: 800;
-  font-size: 26px;
-  line-height: 33px;
+  font-size: 22px;
+  line-height: 30px;
   text-align: center;
   color: var(--mainYellow);
-  width: 700px;
+  width: 730px;
   margin: auto;
 `;
 
