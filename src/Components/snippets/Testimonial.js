@@ -29,16 +29,21 @@ function Testimonial() {
             />
             <Text>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam "Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam"Lorem ipsum dolor
-                sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam
+              Green the Brain institute, thank you 
+              for your weekly educational posts that 
+              have infact increased my interests in 
+              topics of sustainability and renewable 
+              energy. Your commitment and advocacy for 
+              a Green environment has done so much to 
+              influence my positive energy to playing my 
+              part in attaining that safe environment 
+              that we all desire. Finally for now, some 
+              of us look forward to your weekly Ig tips 
+              so in case you get tired of dropping those 
+              hints, remember that some of us would be 
+              starved. Thank you.
               </p>
-              <p>- Olayiwola Olamide</p>
+              <p>- Ayodeji Faneye</p>
             </Text>
           </TestimonialText>
         </Wrapper>

@@ -18,7 +18,8 @@ import ProjectImageThree from '../../assets/project-image3.png';
 import ProjectImageFour from '../../assets/project-image4.png';
 import GalleryIcon from '../../assets/gallery.svg';
 import Testimonial from "../snippets/Testimonial";
-
+import VolunteerBanner from '../../assets/volunteer-banner.png';
+import VolunteerPerson from '../../assets/volunteer-person.jpg';
 
 function Home() {
   return (
@@ -109,6 +110,25 @@ function Home() {
         
     <Testimonial/>
       </Container>
+      <RegisterSection>
+        <RegisterWrapper>
+        <LeftRegister>
+          <p>My name is Olayiwola Olayemi, I am a Product designer and i am also a volunteer 
+            at Green the brain, You should volunteer also or donate to our cause.</p>
+            <RegisterButton href="/" rel="noreferrer" target="_blank">
+              Register
+            </RegisterButton>
+        </LeftRegister>
+        <RightRegister>
+<ImageBackground/>
+
+
+<img src={VolunteerPerson}  alt="Volunteer Person"/>
+        </RightRegister>
+        </RegisterWrapper>
+       
+       
+      </RegisterSection>
     </React.Fragment>
   );
 }
@@ -287,4 +307,59 @@ p{
   font-weight:300;
   
 }
+`
+const RegisterSection = styled.div `
+margin-top:100px;
+background-image:url(${VolunteerBanner});
+height:400px;
+background-size:cover;
+background-repeat:no-repeat;
+display:flex;
+align-items:center;
+`
+const RegisterWrapper = styled.div `
+width:850px;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+`
+const LeftRegister = styled.div `
+width:400px;
+p{
+  font-size:16px;
+  line-height:24px;
+ padding-bottom:20px;
+color:var(--mainGreen);
+}
+`
+const RightRegister = styled.div `
+width:300px;
+height:300px;
+overflow:hidden;
+img{
+  width:300px;
+  height:300px;
+  position:absolute;
+z-index:2;
+}
+`
+const RegisterButton = styled.a`
+background: linear-gradient(107.7deg, rgba(251, 213, 13, 0.9) -10.94%, rgba(9, 98, 12, 0.9) 114.07%);
+padding:15px 30px;
+color:white;
+border-radius:5px;
+text-decoration:none;
+:hover{
+  background: linear-gradient(121.06deg, rgba(244, 176, 25, 0.9) -4.18%, rgba(255, 0, 0, 0.9) 103.48%);
+}
+`
+const ImageBackground = styled.div `
+background: linear-gradient(180deg, #FF0000 0%, #FBD50D 100%);
+width:300px;
+height:300px;
+position:absolute;
+z-index:1;
+margin-left:-8px;
+margin-top:8px;
 `
