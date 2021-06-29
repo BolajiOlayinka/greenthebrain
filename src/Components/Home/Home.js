@@ -10,6 +10,13 @@ import imagetwo from "../../assets/img-2.png";
 import imagethree from "../../assets/img-3.png";
 import imagefour from "../../assets/img-4.png";
 import Learn from '../../assets/Learn.svg';
+import BannerVolunteer from '../../assets/volunteer.jpg';
+import ArrowRight from '../../assets/arrow-right.svg';
+import ProjectImageOne from '../../assets/project-image1.png';
+import ProjectImageTwo from '../../assets/project-image2.png';
+import ProjectImageThree from '../../assets/project-image3.png';
+import ProjectImageFour from '../../assets/project-image4.png';
+
 
 function Home() {
   return (
@@ -67,6 +74,31 @@ function Home() {
         </ImageSec>
         <Button iconImage={Learn} buttonText="Learn More" backgroundColor="rgba(9, 98, 12, 0.78)"/>
       </Container>
+      <VolunteerSection>
+        <div><h5>Find out how to volunteer and give back to the environment</h5>
+        <img src={ArrowRight} alt="Green the Brain"/>
+        </div>
+      </VolunteerSection>
+      <ProjectSection>
+        <Container>
+        <Title text="Projects"/>
+        <SquareDesign>
+          <img src={GreenSquare} alt="" />
+        </SquareDesign>
+        <AboutText>
+          Green the Brain institute is an environmental education institute that
+          employs unconventional activities to encourage, train and educate
+          young people about the environment and the need to protect it.
+        </AboutText>
+      <ImageSection>
+      <img src={ProjectImageOne} className="green the brain project image 1" alt="Green the brain"/>
+        <img src={ProjectImageTwo} className="green the brain project image 2" alt="Green the brain"/>
+        <img src={ProjectImageThree} className="green the brain project image 3" alt="Green the brain"/>
+        <img src={ProjectImageFour} className="green the brain project image 4" alt="Green the brain"/>
+      </ImageSection>
+        
+        </Container>
+      </ProjectSection>
     </React.Fragment>
   );
 }
@@ -166,4 +198,69 @@ text-align:center;
 width:350px;
 `;
 
+// Volunteer Section
+const VolunteerSection = styled.div `
+background-image:url(${BannerVolunteer});
+background-size:cover;
+height:500px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:space-around;
+text-align:center;
+h5{
+    font-family: Nunito;
+    font-size: 28px;
+line-height: 35px;
+width:600px;
+text-align:center;
+color:white;
+padding-top:80px;
+}
+img{
+    position:absolute;
+    width:20px;
+   padding-top:85px;
+    
+}
+`
+// Projects Section
+const ProjectSection = styled.div `
+padding-top:50px;
 
+}
+`
+const ImageSection = styled.div`
+width:800px;
+margin:auto;
+img{
+  :nth-child(1) {
+    width:400px;
+    position:absolute;
+    z-index:4;
+    padding-top:100px;
+  }
+  :nth-child(2) {
+    width:320px;
+    position:absolute;
+    z-index:3;
+    padding-left:350px;
+    padding-top:60px
+
+  }
+  :nth-child(3) {
+    width:213px;
+    position:absolute;
+    z-index:2;
+   padding-left:630px;
+    padding-top:40px;
+  }
+  :nth-child(4) {
+    width:163px;
+    position:absolute;
+    z-index:1;
+    padding-left:630px;
+    padding-top:220px;
+  }
+}
+`
