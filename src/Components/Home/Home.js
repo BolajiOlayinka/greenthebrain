@@ -16,6 +16,7 @@ import ProjectImageOne from '../../assets/project-image1.png';
 import ProjectImageTwo from '../../assets/project-image2.png';
 import ProjectImageThree from '../../assets/project-image3.png';
 import ProjectImageFour from '../../assets/project-image4.png';
+import GalleryIcon from '../../assets/gallery.svg';
 
 
 function Home() {
@@ -95,8 +96,12 @@ function Home() {
         <img src={ProjectImageTwo} className="green the brain project image 2" alt="Green the brain"/>
         <img src={ProjectImageThree} className="green the brain project image 3" alt="Green the brain"/>
         <img src={ProjectImageFour} className="green the brain project image 4" alt="Green the brain"/>
+        <ImageText>
+        <p>Through our Networking-Nature-Camp, the institute seeks to build a community of environmental enthusiasts through its camping experience</p>
+        <p>The institute also provides exceptional tourism packages in different African countries.</p>
+        </ImageText>
       </ImageSection>
-        
+      <Button iconImage={GalleryIcon} buttonText="View Gallery" backgroundColor="rgba(9, 98, 12, 0.78)"/>
         </Container>
       </ProjectSection>
     </React.Fragment>
@@ -262,5 +267,19 @@ img{
     padding-left:630px;
     padding-top:220px;
   }
+}
+`
+const ImageText = styled.div `
+width:380px;
+text-align:center;
+padding-top:400px;
+margin-left:auto;
+margin-bottom:50px;
+p{
+  margin-bottom:0px;
+  font-family: Noto Sans, san-serif;
+  font-size:16px;
+  font-weight:300;
+  
 }
 `
