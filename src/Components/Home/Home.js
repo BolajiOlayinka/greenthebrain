@@ -58,10 +58,7 @@ function Home() {
               <img src={imagetwo} alt="Green the brain" />
             </OverlapImage>
             <ImagesText>
-            Through our Networking-Nature-Camp, 
-            the institute seeks to build a community of 
-            environmental enthusiasts through its camping 
-            experience
+            The Networking-Nature-Camp is one of the courses offered by Green the Brain Institute. It is a 3nights, 4 days environmental education course packed with unconventional activities with the aim of building young environmental enthusiasts from different backgrounds.
             </ImagesText>
           </div>
           <div>
