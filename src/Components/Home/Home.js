@@ -20,6 +20,7 @@ import ProjectImageFour from '../../assets/project-image4.png';
 import GalleryIcon from '../../assets/gallery.svg';
 import Testimonial from "../snippets/Testimonial";
 import VolunteerBanner from '../../assets/volunteer-banner.png';
+import VolunteerBannerTwo from '../../assets/volunteer-2.png';
 import VolunteerPerson from '../../assets/volunteer-person.jpg';
 
 function Home() {
@@ -103,7 +104,7 @@ function Home() {
         </Container>
       </ProjectSection>
       
-      {/* <Container>   
+      <Container>   
     <Testimonial/>
       </Container>
       <RegisterSection>
@@ -124,7 +125,7 @@ function Home() {
         </RegisterWrapper>
        
        
-      </RegisterSection> */}
+      </RegisterSection>
     </React.Fragment>
   );
 }
@@ -306,8 +307,8 @@ align-items:center;
 justify-content:space-around;
 text-align:center;
 h5{
-    font-family: Nunito;
-    font-size: 28px;
+font-family: Nunito;
+font-size: 28px;
 line-height: 35px;
 width:600px;
 text-align:center;
@@ -319,6 +320,21 @@ img{
     width:20px;
    padding-top:85px;
     
+}
+@media screen and (max-width: 1200px) and (min-width: 991px) {
+  background-image:url(${BannerVolunteer});
+}
+@media(min-width:1200px){
+  background-image:url(${VolunteerBannerTwo});
+
+}
+@media(max-width:991px){
+  background-image:url(${VolunteerBannerTwo});
+h5{
+  width:90%;
+  margin:auto;
+  font-size:22px;
+}
 }
 `
 // Projects Section
