@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useLayoutEffect } from "react";
 import styled from "styled-components";
 import Logo from "../src/assets/Logo.svg";
 import donatelove from "../src/assets/love.svg";
@@ -11,11 +11,30 @@ function Header() {
 //   const [fixed, setFixed] = useState("initial");
   const [showIcon, setShowIcon] = useState(true);
   const [showItem, setShowItem] = useState(false);
+  const [size, setSize] = useState(0+`px`);
+
+  function useWindowSize() {
+    useLayoutEffect(() => {
+      function updateSize() {
+        setSize(window.innerWidth + 'px');
+      }
+      window.addEventListener('resize', updateSize);
+      updateSize();
+      return () => window.removeEventListener('resize', updateSize);
+    }, []);
+    return size;
+  }
+const width= useWindowSize();
+if (width >= 991+ 'px'){
+setShowIcon(true);
+}
+console.log(width);
   const toggle = (e) => {
     setShowItem(!showItem, e);
     setShowIcon(!showIcon, e);
   };
   return (
+    
     <React.Fragment>
       <Container>
         <HeaderWrapper>
@@ -23,7 +42,7 @@ function Header() {
             <img src={Logo} alt="Green the brain Institute" />
           </LeftHeader>
           <RightHeader>
-            {!showItem && (
+            {(!showItem) && (
               <React.Fragment>
                 <NavLink>
                   <Linker to="/">Home</Linker>

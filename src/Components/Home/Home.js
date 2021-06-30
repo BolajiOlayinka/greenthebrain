@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import BannerImage from "../../assets/banner.jpg";
+import SMBannerImage from "../../assets/small-banner.jpg";
 import BannerLine from "../../assets/bannerline.png";
 import Title from "../snippets/TitleHead";
 import Button from "../snippets/LearnButton.js";
@@ -31,12 +32,9 @@ function Home() {
               <img src={BannerLine} alt="Yellow Curve" />
             </Line>
             <Text>
-              <TextHeading>Green the Brain Institute (Think Sustainably)</TextHeading>
+              <TextHeading>Green the Brain Institute </TextHeading>
               <TextSubHeading>
-              An environmental education institute that 
-              employs unconventional activities to educate 
-              young people on the importance of the environment 
-              and the need to preserve it.
+              (Think Sustainably)
               </TextSubHeading>
             </Text>
           </BannerContent>
@@ -103,9 +101,9 @@ function Home() {
       </ImageSection>
       <Button iconImage={GalleryIcon} buttonText="View Gallery" backgroundColor="rgba(9, 98, 12, 0.78)"/>
         </Container>
-      </ProjectSection>
-      <Container>
-        
+      </ProjectSection> 
+      
+       <Container>   
     <Testimonial/>
       </Container>
       <RegisterSection>
@@ -144,6 +142,11 @@ const Line = styled.div`
   img {
     width: 364px;
   }
+  @media(max-width:991px){
+    img{
+      display:none;
+    }
+  }
 `;
 const Banner = styled.div`
   background-image: url(${BannerImage});
@@ -151,35 +154,76 @@ const Banner = styled.div`
   height: 600px;
   background-size: cover;
   justify-content: center;
+  @media(max-width:991px){
+    height:400px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  @media(max-width:576px){
+    background-image: url(${SMBannerImage});
+    height:600px;
+    display:flex;
+    align-items:center;
+  }
 `;
 const BannerContent = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
   padding-top: 150px;
+  @media(max-width:991px){
+    padding-top:0px;
+  }
 `;
 const Text = styled.div`
   margin-left: -300px;
   padding-top: 75px;
+  @media(max-width:991px){
+    margin-left:auto;
+    margin-right:auto;
+    padding-top:0px;
+  }
 `;
 
 const TextHeading = styled.div`
   font-family: "Nunito", sans-serif;
   font-style: normal;
   font-weight: 800;
-  font-size: 35px;
+  font-size: 65px;
   color: var(--mainYellow);
   text-align: center;
+  @media(max-width:1200px){
+    font-size:45px;
+  }
+  @media(max-width:991px){
+    font-size:36px;
+  }
+  @media(max-width:576px){
+    font-size:30px;
+  }
+  @media(max-width:426px){
+    font-size:22px;
+  }
 `;
 const TextSubHeading = styled.div`
   font-family: "Nunito", sans-serif;
   font-weight: 800;
-  font-size: 22px;
-  line-height: 30px;
+  font-size: 26px;
+  line-height: 36px;
   text-align: center;
   color: var(--mainYellow);
-  width: 730px;
+  
   margin: auto;
+  @media(max-width:991px){
+    font-size:22px;
+  }
+  @media(max-width:576px){
+    font-size:18px;
+  }
+  @media(max-width:426px){
+    font-size:14px;
+  }
 `;
 
 // About Us Section
