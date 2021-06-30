@@ -376,6 +376,64 @@ img{
     padding-top:220px;
   }
 }
+@media(max-width:991px){
+  width:650px;
+  margin:auto;
+  img{
+    :nth-child(1) {
+      width:350px;
+      
+      padding-top:100px;
+    }
+    :nth-child(2) {
+      width:260px;
+      padding-left:250px;
+    }
+    :nth-child(3) {
+      width:173px;
+      padding-left:450px;
+    }
+    :nth-child(4) {
+      width:113px;
+      padding-left:450px;
+      padding-top:170px;
+    }
+}
+@media(max-width:768px){
+  width:550px;
+  margin-left:0px;
+  
+  img{
+    :nth-child(3) {
+      display:none;
+    }
+    :nth-child(4) {
+     display:none;
+    }
+    :nth-child(1) {
+      width:250px;
+      
+      padding-top:100px;
+    }
+    :nth-child(2) {
+      width:130px;
+      padding-left:200px;
+    }
+  }
+
+ 
+}
+@media(max-width:576px){
+  width:400px;
+  :nth-child(1) {
+    
+    padding-top:50px;
+  }
+}
+@media(max-width:426px){
+  
+  width:350px;
+}
 `
 const ImageText = styled.div `
 width:380px;
@@ -389,6 +447,15 @@ p{
   font-size:16px;
   font-weight:300;
   
+}
+@media(max-width:768px){
+  padding-top:200px;
+  width:220px;
+  // padding-right:100px;
+  margin-left:auto;
+}
+@media(max-width:576px){
+  padding-top:350px;
 }
 `
 const RegisterSection = styled.div `
