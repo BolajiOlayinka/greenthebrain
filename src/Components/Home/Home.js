@@ -101,9 +101,9 @@ function Home() {
       </ImageSection>
       <Button iconImage={GalleryIcon} buttonText="View Gallery" backgroundColor="rgba(9, 98, 12, 0.78)"/>
         </Container>
-      </ProjectSection> 
+      </ProjectSection>
       
-       <Container>   
+      {/* <Container>   
     <Testimonial/>
       </Container>
       <RegisterSection>
@@ -124,7 +124,7 @@ function Home() {
         </RegisterWrapper>
        
        
-      </RegisterSection>
+      </RegisterSection> */}
     </React.Fragment>
   );
 }
@@ -236,11 +236,24 @@ font-family: Noto Sans, san-serif;
   text-align: center;
   margin: auto;
   color: #333c33;
+  @media(max-width:768px){
+    width:90%;
+    margin:auto;
+  }
+  @media(max-width:426px){
+    width:95%;
+    margin:auto;
+    font-size:16px;
+    line-height:23px;
+  }
 `;
 const SquareDesign = styled.div`
   position: absolute;
   padding-left: 50px;
   margin-top: -20px;
+  @media(max-width:991px){
+    display:none;
+  }
 `;
 const ImageSec = styled.div`
   display: flex;
@@ -248,6 +261,16 @@ const ImageSec = styled.div`
   width: 750px;
   margin: auto;
   padding-top: 15px;
+  @media (max-width:768px){
+    flex-direction:column;
+    width:400px;
+    align-items:center;
+    
+  }
+  @media(max-width:426px){
+    width:350px;
+    margin:auto;
+  }
 `;
 const OverlapImage = styled.div`
   img {
@@ -262,10 +285,12 @@ const OverlapImage = styled.div`
       margin-left: -70px;
     }
   }
+ 
 `;
 const ImagesText = styled.p`
 font-family: Noto Sans, san-serif;
 font-size:16px;
+line-height:22px;
 text-align:center;
 width:350px;
 `;
