@@ -34,11 +34,11 @@ function Footer() {
             <NavHeading>
               Connect with us
             </NavHeading>
-            <NavLink>
+            <SocialMedia>
             <Link to ="/"><img src={Facebook} alt="Green the brain social media icon"/></Link>
             <Link to ="/"><img src={Twitter} alt="Green the brain social media icon"/></Link>
             <Link to ="/"><img src={Linkedin} alt="Green the brain social media icon"/></Link>
-            </NavLink>
+            </SocialMedia>
           </Three>
         </Nav>
       </Container>
@@ -63,26 +63,44 @@ const Nav = styled.div`
   display: flex;
   justify-content:space-around;
   padding-top:80px;
+  @media(max-width:576px){
+    width:90%;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    padding-left:30px;
+  }
 `;
 const One = styled.div`
-
+@media(max-width:576px){
+    width:45%;
+  }
 `;
 const Two = styled.div`
-
+@media(max-width:576px){
+    width:45%;
+  }
 `;
 const Three = styled.div`
-
+@media(max-width:576px){
+    padding-top:30px;
+    width:100%;
+  }
 `;
 const NavHeading = styled.div`
 font-weight: 600;
-font-size: 24px;
+font-size: 22px;
 color:white;
+padding-bottom:8px;
+Noto Sans, san-serif;
+
 `;
-const NavLink = styled(Link) `
+const NavLink = styled.div `
 a{
     color:#979797;
     text-decoration:none;
     padding-bottom:5px;
+    font-size:14px;
+    line-height:22px;
 }
 :nth-child(3){
     width:150px;
@@ -91,5 +109,14 @@ a{
     a{
         padding-right:5px;
     }
+}
+`
+const SocialMedia = styled.div `
+a{
+    padding-right:5px;
+    
+}
+img{
+    width:15px;
 }
 `

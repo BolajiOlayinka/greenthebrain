@@ -151,7 +151,9 @@ function Home() {
               donate to our cause.
             </p>
             <p>
-              I am a volunteer to this very cause of going green, you might want to join us. kindly click the button below to register
+              I am a volunteer to this very cause of going green, 
+              you might want to join us. kindly click the button 
+              below to register
             </p>
             <RegisterButton href="/" rel="noreferrer" target="_blank">
               Register
