@@ -1,4 +1,4 @@
-import React, { useState,useLayoutEffect } from "react";
+import React, { useState,useLayoutEffect, useEffect } from "react";
 import styled from "styled-components";
 import Logo from "../src/assets/Logo.svg";
 import donatelove from "../src/assets/love.svg";
@@ -24,11 +24,9 @@ function Header() {
     }, []);
     return size;
   }
-const width= useWindowSize();
-if (width >= 991+ 'px'){
-setShowIcon(true);
-}
-console.log(width);
+
+
+
   const toggle = (e) => {
     setShowItem(!showItem, e);
     setShowIcon(!showIcon, e);
