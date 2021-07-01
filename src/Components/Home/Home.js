@@ -150,6 +150,9 @@ function Home() {
               also a volunteer at Green the brain, You should volunteer also or
               donate to our cause.
             </p>
+            <p>
+              I am a volunteer to this very cause of going green, you might want to join us. kindly click the button below to register
+            </p>
             <RegisterButton href="/" rel="noreferrer" target="_blank">
               Register
             </RegisterButton>
@@ -512,6 +515,25 @@ const LeftRegister = styled.div`
     padding-bottom: 20px;
     color: var(--mainGreen);
   }
+  @media(max-width:991px){
+    margin:auto;
+    text-align:center;
+    width:90%;
+    margin:auto;
+    p{
+      :nth-child(1){
+        display:none;
+      }
+    }
+  }
+  @media(min-width:991px){
+  
+    p{
+      :nth-child(2){
+        display:none;
+      }
+    }
+  }
 `;
 const RightRegister = styled.div`
   width: 300px;
@@ -522,6 +544,9 @@ const RightRegister = styled.div`
     height: 300px;
     position: absolute;
     z-index: 2;
+  }
+  @media(max-width:991px){
+    display:none;
   }
 `;
 const RegisterButton = styled.a`
