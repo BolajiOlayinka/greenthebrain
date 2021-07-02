@@ -1,11 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
+
 export default function LearnButton(props) {
     return (
-        <AboutButton style={{backgroundColor:props.backgroundColor}}>
+       
+<AboutButton style={{backgroundColor:props.backgroundColor, color:props.color}}>
         <div><img src={props.iconImage} alt="Learn Bulb"/></div><div>{props.buttonText}</div>
-    </AboutButton>   
+    </AboutButton> 
+       
+          
     )
 }
 
@@ -21,7 +25,7 @@ margin-bottom:30px;
 text-align:center;
 box-shadow: -20px 30px 25px rgba(206, 206, 206, 0.25);
 border-radius: 25px 25px 0px 25px;
-color:#FBD50D;
+// color:#FBD50D;
 img{
     width:35px;
     

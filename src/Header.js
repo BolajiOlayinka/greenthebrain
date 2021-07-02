@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Navbar, Nav, NavItem } from "reactstrap";
 import Logo from "./assets/Logo.svg";
+// import donatelove from "../src/assets/love.svg";
 // import BlueLogo from "../assets/icon-blue.svg";
 // import YellowLogo from "../assets/icon-yellow.svg";
 import { Link, useLocation } from "react-router-dom";
@@ -26,9 +27,15 @@ export default function Header() {
     animateScrollTo(0);
   };
 
-  // const ScrollToContact = () => {
-  //   animateScrollTo(document.querySelector(".contactform"));
-  // };
+  const ScrollToAbout = () => {
+    animateScrollTo(document.querySelector(".button-link"));
+  };
+  const ScrollToProject = () => {
+    animateScrollTo(document.querySelector(".project"));
+  };
+  const ScrollToRegister = () => {
+    animateScrollTo(document.querySelector(".register"));
+  };
   const location = useLocation();
   
 
@@ -48,7 +55,7 @@ export default function Header() {
     } else if (window.pageYOffset === 0 && location.pathname === "/") {
       
       setNavColor("black");
-      setBackground("transparent");
+      setBackground("white");
       setBoxShadow("transparent");
     } else {
     
@@ -63,7 +70,7 @@ export default function Header() {
     if (window.pageYOffset >= 0) {
       setFixed("fixed");
     } else {
-      setFixed("initial");
+      setFixed("fixed");
     }
   };
 
@@ -110,6 +117,7 @@ export default function Header() {
                 <StyledContactLink
                   to="/"
                   onClick={() => {
+                    ScrollToAbout();
                     closeModal();
                    
                   }}
@@ -122,8 +130,9 @@ export default function Header() {
                   to="/"
                   
                   onClick={() => {
+                    ScrollToProject()
                     closeModal();
-                    ScrollToTop();
+                    
                   }}
                 >
                   Projects
@@ -133,12 +142,14 @@ export default function Header() {
                 <StyledLink
                   to="/"
                   
-                  onClick={closeModal}
+                  onClick={()=>{
+                    ScrollToRegister();
+                    closeModal();}}
                 >
-                  Volunteers
+                  Register
                 </StyledLink>
               </NavItem>
-              <NavItem>
+              {/* <NavItem>
                 <StyledLink
                   to="/"
                  
@@ -155,7 +166,7 @@ export default function Header() {
                 >
                   Donate
                 </StyledLink>
-              </NavItem>
+              </NavItem> */}
             </StyledNav>
           </SmallNav>
         )}
@@ -185,7 +196,9 @@ export default function Header() {
               <StyledLink
                 navcolor={navcolor}
                 to="/"
-                
+                onClick={() => {
+                  ScrollToAbout();
+                }}
               >
                 About Us
               </StyledLink>
@@ -196,10 +209,10 @@ export default function Header() {
                 navcolor={navcolor}
                 
                 onClick={() => {
-                  ScrollToTop();
+                  ScrollToProject();
                 }}
               >
-                Peojects
+                Projects
               </StyledLink>
             </NavItem>
             <NavItem>
@@ -208,13 +221,13 @@ export default function Header() {
                 navcolor={navcolor}
                 
                 onClick={() => {
-                  ScrollToTop();
+                  ScrollToRegister();
                 }}
               >
-                Volunteer
+                Register
               </StyledLink>
             </NavItem>
-            <NavItem>
+            {/* <NavItem>
               <StyledLink
                 to="/"
                 navcolor={navcolor}
@@ -236,8 +249,14 @@ export default function Header() {
                 }}
               >
                 Donate
+                <img
+                    src={donatelove}
+                    className="donatelove"
+                    alt="donate love"
+                  />
               </StyledLink>
-            </NavItem>
+             
+            </NavItem> */}
           </StyledNav>
         </LargeNav>
       </StyledNavbar>
@@ -326,10 +345,10 @@ const StyledLink = styled(Link)`
   margin-right: 33px;
   padding-bottom: 8px;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 13px;
   text-decoration:none;
   :hover {
-    color: orange;
+    color: red;
     cursor: pointer;
     text-decoration: none;
   }
@@ -337,7 +356,7 @@ const StyledLink = styled(Link)`
     color: var(--mainGreen);
     transition: border-bottom 0.5s ease-in;
   }
-
+  
   @media (max-width: 735px) {
     font-size: 12px;
     margin-right: 40px;
@@ -405,10 +424,22 @@ margin-left: auto;
   @media (max-width: 767.9px) {
     display: none;
   }
+  .donatelove {
+    width: 12px;
+    height: 12px;
+    margin-left: -5px;
+    margin-top: -5px;
+  }
 `;
 const SmallNav = styled.div`
   @media (min-width: 768px) {
     display: none;
+  }
+  .donatelove {
+    width: 12px;
+    height: 12px;
+    margin-left: -5px;
+    margin-top: -5px;
   }
 `;
 const StyledFontAwesome = styled(FontAwesomeIcon)`

@@ -11,6 +11,7 @@ import imagetwo from "../../assets/img-2.png";
 import imagethree from "../../assets/img-3.png";
 import imagefour from "../../assets/img-4.png";
 import Learn from "../../assets/Learn.svg";
+import Register from "../../assets/register.svg";
 import BannerVolunteer from "../../assets/volunteer.jpg";
 import ArrowRight from "../../assets/arrow-right.svg";
 import ProjectImageOne from "../../assets/project-image1.png";
@@ -36,12 +37,22 @@ function Home() {
               <TextHeading>Green the Brain Institute </TextHeading>
               <TextSubHeading>(Think Sustainably)</TextSubHeading>
             </Text>
+           
           </BannerContent>
+          <a href="https://bit.ly/nncpilot" rel="noreferrer" target="_blank"  className="button-link">
+          <Button
+          iconImage={Register}
+          buttonText="Register"
+          backgroundColor="red"
+          color="white"
+        />
+          </a>
+          
         </Container>
       </Banner>
       <Container>
         <Title text="About Us" />
-        <SquareDesign>
+        <SquareDesign className="about-us">
           <img src={GreenSquare} alt="" />
         </SquareDesign>
         <AboutText>
@@ -78,12 +89,13 @@ function Home() {
           iconImage={Learn}
           buttonText="Learn More"
           backgroundColor="rgba(9, 98, 12, 0.78)"
+          color='#FBD50D'
         />
       </Container>
       <VolunteerSection>
         <div>
           <h5>Find out how to volunteer and give back to the environment</h5>
-          <img src={ArrowRight} alt="Green the Brain" />
+          <img src={ArrowRight} alt="Green the Brain" className="project"/>
         </div>
       </VolunteerSection>
       <ProjectSection>
@@ -135,14 +147,17 @@ function Home() {
             iconImage={GalleryIcon}
             buttonText="View Gallery"
             backgroundColor="rgba(9, 98, 12, 0.78)"
+            color="#FBD50D"
+            
+           
           />
         </Container>
       </ProjectSection>
 
       <Container>
-        <Testimonial />
+        <Testimonial/>
       </Container>
-      <RegisterSection>
+      <RegisterSection className="register">
         <RegisterWrapper>
           <LeftRegister>
             <p>
@@ -155,7 +170,7 @@ function Home() {
               you might want to join us. kindly click the button 
               below to register
             </p>
-            <RegisterButton href="/" rel="noreferrer" target="_blank">
+            <RegisterButton href="https://bit.ly/nncpilot" rel="noreferrer" target="_blank">
               Register
             </RegisterButton>
           </LeftRegister>
@@ -206,6 +221,9 @@ const Banner = styled.div`
     height: 600px;
     display: flex;
     align-items: center;
+  }
+  .button-link{
+    text-decoration:none;
   }
 `;
 const BannerContent = styled.div`
