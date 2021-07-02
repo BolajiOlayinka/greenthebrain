@@ -113,22 +113,22 @@ function Home() {
           <ImageSection>
             <img
               src={ProjectImageOne}
-              className="green the brain project image 1"
+              className="project-image-one"
               alt="Green the brain"
             />
             <img
               src={ProjectImageTwo}
-              className="green the brain project image 2"
+              className="project-image-two"
               alt="Green the brain"
             />
             <img
               src={ProjectImageThree}
-              className="green the brain project image 3"
+              className="project-image-three"
               alt="Green the brain"
             />
             <img
               src={ProjectImageFour}
-              className="green the brain project image 4"
+              className="project-image-four"
               alt="Green the brain"
             />
             <ImageText>
@@ -406,6 +406,10 @@ img{
     position:absolute;
     z-index:4;
     padding-top:100px;
+    @media(max-width:991px){
+      width:350px;
+      padding-top:100px;
+    }
   }
   :nth-child(2) {
     width:320px;
@@ -453,6 +457,7 @@ img{
       padding-top:170px;
     }
 }
+
 @media(max-width:768px){
   width:550px;
   margin-left:0px;
@@ -470,19 +475,20 @@ img{
       padding-top:100px;
     }
     :nth-child(2) {
-      width:130px;
+      width:130px!important;
       padding-left:200px;
     }
   }
-
- 
 }
 @media(max-width:576px){
   width:400px;
-  :nth-child(1) {
+  img{
+    :nth-child(1) {
     
-    padding-top:50px;
+      padding-top:50px;
+    }
   }
+  
 }
 @media(max-width:426px){
   

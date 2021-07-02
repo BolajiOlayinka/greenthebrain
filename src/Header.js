@@ -348,7 +348,7 @@ const StyledLink = styled(Link)`
   font-size: 13px;
   text-decoration:none;
   :hover {
-    color: red;
+    color:white;
     cursor: pointer;
     text-decoration: none;
   }
@@ -387,13 +387,12 @@ const StyledContactLink = styled(Linker)`
   font-size: 16px;
 
   :hover {
-    color: var(--mainGreen);
+    color: green;
     cursor: pointer;
     text-decoration: none;
   }
   :active {
     color: var(--mainGreen);
-
     transition: border-bottom 0.5s ease-in;
   }
 
